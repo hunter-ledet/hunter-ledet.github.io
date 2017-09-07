@@ -5,7 +5,7 @@
  * Functions to work with our data created in
  * data.js.
  *
- * See the README for detailed instructions,
+ * See the README for detailed instructio ns,
  * and read every instruction carefully.
  */
 
@@ -25,9 +25,10 @@ function search(animals, name){
 // Step 2 - Replace //////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 function replace(animals, name, replacement){
-    for (var i = 0; i < animals.length; i++)
-    if (animals[i].name == name){
+    for (var i = 0; i < animals.length; i++){
+    if (animals[i].name === name){
         animals.splice(i, 1, replacement);
+        }
     }
 }
 
@@ -49,10 +50,14 @@ function remove(animals, name){
 //////////////////////////////////////////////////////////////////////
 function add(animals, animal){
     for(var x = 0; x < animals.length; x++){
-        if(animals[x].name === animal.name){
+        if(animals[x].name == animal.name){
             return null;
-        } else if(animal.name.length > 0 && animal.species.length > 0){
-            return animals.push(animal);
+        }
+    }
+        for (var j = 0; j < animals.length; j++){   
+        if(animal.name.length > 0 && animal.species.length > 0){
+            return animal.name;
+            //animals.push(animal);
         } 
     }
 }

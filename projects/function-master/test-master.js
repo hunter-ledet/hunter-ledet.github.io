@@ -50,7 +50,7 @@
     function yay(){
       var from_yay = "i'm inside yay;";
     }
-
+// TRIED NULL, UNDEFINED, I'M IN FOO, I'M INSIDE YAY;, BLANK STRING, IN_FOO
     function foo(){
       var in_foo = "i'm in foo";
       if(this.from_yay){

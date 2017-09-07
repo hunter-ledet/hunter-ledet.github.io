@@ -68,18 +68,19 @@ var duck = {
     name: 'Jerome',
     noises: ['quack', 'honk', 'sneeze', 'woosh']
 };
+
 animals.push(duck);
 console.log(animals);
 var dog = {
     species: 'dog',
     name: 'Oliver',
     noises: ['ruff', 'howl']
-}
+};
 var horse = {
     species: 'horse',
     name: 'Wheezer',
     noises: ['neigh', 'brow']
-}
+};
 animals.push(dog, horse);
 console.log(animals);
 
@@ -87,11 +88,13 @@ console.log(animals);
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+
 // I chose an Array considering that they are automatically 0 indexed. Since we are storing objects, I thought it would be easier to access.
 
 var friends = [];
+var randomFriend;
 function getRandom(){
-    return animals[Math.floor(Math.random() * animals.length)];
+    return animals[Math.floor(Math.random() * animals.length)].name;
 }
 friends.push(getRandom());
 

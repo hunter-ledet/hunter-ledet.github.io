@@ -16,12 +16,12 @@ for (let key in object){
 
 function keysToString(object) {
     var newArr = [];
-    var newStr = "";
+   // var newStr = "";
     for(let key in object){
-        return newArr = object[key].key;    
+     newArr.push(object[key].key);    
     }
-    newStr = newArr.split().join(", ");
-   return newStr;
+    let newStr = newArr.join(' ');
+    return newStr;
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -30,12 +30,13 @@ function keysToString(object) {
 
 function valuesToString(object) {
     var newArr = [];
-    var newStr = "";
+   // var newStr = "";
     for(let key in object){
-        newArr = object[key];
+        newArr.push(object[key]);
+        let newStr = newArr.join(' ');
+        return newStr;
     }
-    newStr = newArr.split().join(", ");
-    return newStr
+    
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -63,8 +64,7 @@ function capitalizeWord(string) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeAllWords(string) {
-    var res = string.toUpperCase();
-    return res;
+    return string.toUpperCase();
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -72,7 +72,8 @@ function capitalizeAllWords(string) {
 //////////////////////////////////////////////////////////////////////
 
 function welcomeMessage(object) {
-
+    
+    return String("Welcome " + object.name.charAt(0).toUpperCase() + object.name.slice(1) + "!");
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -80,15 +81,23 @@ function welcomeMessage(object) {
 //////////////////////////////////////////////////////////////////////
 
 function profileInfo(object) {
+    return String(object.name.charAt(0).toUpperCase() + object.name.slice(1) 
+    + " is a " + object.species.charAt(0).toUpperCase() + object.species.slice(1));
 
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 9 - Maybe Noises /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+var newArr = [];
 function maybeNoises(object) {
-
+    if(Array.isArray(object.noises) === true){
+        newArr.push(object.noises);
+        let newStr = newArr.join(" ");
+        return newStr;
+    } else {
+        return String("there are no noises");
+    }
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -96,7 +105,12 @@ function maybeNoises(object) {
 //////////////////////////////////////////////////////////////////////
 
 function hasWord(string, word) {
-
+    var n = string.search(word);
+    if(n > 0){
+        return true;
+    } else {
+        return false;
+    }
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -104,15 +118,23 @@ function hasWord(string, word) {
 //////////////////////////////////////////////////////////////////////
 
 function addFriend (name, object) {
-
+    object.friends.push(name);
+    return object;
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 12 - Is Friend ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+var newArr = [];
 function isFriend(name, object) {
-
+    newArr.push(object.friends)
+    for(let x = 0; x < newArr.length; x++){
+        if(newArr[x] === name){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 //////////////////////////////////////////////////////////////////////
