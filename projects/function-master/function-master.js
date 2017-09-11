@@ -15,13 +15,13 @@ for (let key in object){
 //////////////////////////////////////////////////////////////////////
 
 function keysToString(object) {
-    var newArr = [];
-   // var newStr = "";
-    for(let key in object){
-     newArr.push(object[key].key);    
-    }
-    let newStr = newArr.join(' ');
-    return newStr;
+   var newArr = [];
+   for (let key in object){
+      newArr.push(key);
+           
+       
+   }
+   return newArr.join(" ");
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -30,13 +30,13 @@ function keysToString(object) {
 
 function valuesToString(object) {
     var newArr = [];
-   // var newStr = "";
+  // var newStr = "";
     for(let key in object){
+    if (typeof object[key] === "string"){
         newArr.push(object[key]);
-        let newStr = newArr.join(' ');
-        return newStr;
-    }
+    }   
     
+    }return newArr.join(" ");   
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -64,7 +64,9 @@ function capitalizeWord(string) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeAllWords(string) {
-    return string.toUpperCase();
+    return string.replace(/\b\w/g, 
+    function(l){
+        return l.toUpperCase() });
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -91,10 +93,8 @@ function profileInfo(object) {
 //////////////////////////////////////////////////////////////////////
 var newArr = [];
 function maybeNoises(object) {
-    if(Array.isArray(object.noises) === true){
-        newArr.push(object.noises);
-        let newStr = newArr.join(" ");
-        return newStr;
+    if(object.hasOwnProperty("noises") && object['noises'].length > 0){
+        return object['noises'].join(" ");
     } else {
         return String("there are no noises");
     }
@@ -127,30 +127,68 @@ function addFriend (name, object) {
 //////////////////////////////////////////////////////////////////////
 var newArr = [];
 function isFriend(name, object) {
-    newArr.push(object.friends)
-    for(let x = 0; x < newArr.length; x++){
-        if(newArr[x] === name){
-            return true;
-        } else {
-            return false;
+    if(!object.hasOwnProperty('friends')){
+        return false;
+    } else {
+        for(var i = 0; i < object.friends.length; i++){
+            if(object.friends[i] === name){
+                return true;
+            }
         }
+    return false;    
     }
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 13 - Non-Friends /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
 function nonFriends(name, array) {
-
+  var namesArray = [];
+  var tempPerson = [];
+  var person = [];
+  for(var i in array){
+    namesArray.push(array[i]["name"]);
+    //console.log(namesArray);
+  }
+  for(var j in array){
+    if(array[j]["name"] === name){
+      tempPerson = Object.values(array[j]);
+      //console.log(tempPerson);
+    }
+  }
+  person.push(tempPerson[0]);
+  person.push(tempPerson[1][0]);
+  person.push(tempPerson[1][1]);
+//   console.log(namesArray);
+//   console.log(person);
+  for(var k = 0; k < person.length; k++){
+    for(var l = 0; l < namesArray.length; l++){
+//       console.log(namesArray[l]);
+//       console.log(person[k]);
+      if(namesArray[l] === person[k]){
+//         console.log(namesArray[l]);
+//         console.log(person[k]);
+        namesArray.splice(l, 1);
+//         console.log(namesArray);
+//         console.log(person);
+      }
+    }
+  }
+  return namesArray;
 }
+
 
 //////////////////////////////////////////////////////////////////////
 // Function 14 - Update Object ///////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
 function updateObject(object, key, value) {
-
+    if(object.hasOwnProperty(key) && object[key].length > 0){
+        object[key] = value;
+    } else {
+        object[key] = value;
+    }
+        return object;
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -158,7 +196,14 @@ function updateObject(object, key, value) {
 //////////////////////////////////////////////////////////////////////
 
 function removeProperties(object, array) {
-
+    for(var key in object){
+        for(var x = 0; x < array.length; x++){
+            if(key === array[x]){
+                delete object[key]
+            }
+        }
+    }
+return object;
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -166,6 +211,20 @@ function removeProperties(object, array) {
 //////////////////////////////////////////////////////////////////////
 
 function dedup(array) {
+    var seen = {};
+    var unique = [];
+    var len = array.length;
+    var j = 0
+    for (var i = 0; i < len; i++){
+        var item = array[i];
+        if(seen[item] !== 1) {
+            seen[item] = 1
+            unique[j++] = item;
+            
+        }
+        
+    }
+    return unique;
 
 }
 

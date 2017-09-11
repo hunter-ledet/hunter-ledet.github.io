@@ -57,7 +57,7 @@
         in_foo = this.from_yay;
       }
       assert.equal(in_foo, "i'm in foo");
-      assert.equal(this.from_yay, "i'm in foo");
+      assert.equal(this.from_yay, undefined);
     }
     yay();
     foo();
