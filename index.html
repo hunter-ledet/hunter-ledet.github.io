@@ -1,99 +1,151 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title> Hunter Ledet </title>
-        <style>
-            body {
-                background: rgb(125, 198, 205);
-                color: rgb(45, 45, 45);
-                padding: 10px;
-                font-family: arial;
-            }
-            header {
-                font-size: 1.5em;
-                font-weight: bold;
-            }
-            [id=all-contents] {
-                max-width: 800px;
-                margin: auto;
-            }
-    
-            /* navigation menu */
-            nav {
-                background: rgb(239, 80, 41);
-                margin: 0 auto;
-                margin-bottom: 20px;
-                display: flex;
-                padding: 10px;
-                border-radius: 15px;
-            }
-            nav header {
-                display: flex;
-                align-items: center;
-                color: rgb(255, 255, 255);
-                flex: 1;
-            }
-            nav ul {
-                list-style-image: none;
-            }
-            nav li {
-                display: inline-block;
-                padding: 0 10px;
-            }
-            nav a {
-                text-decoration: none;
-                color: #fff;
-            }
-    
-            /* main container area beneath menu */
-            main {
-                background: rgb(245, 238, 219);
-                display: flex;
-                border-radius: 15px;
-            }
-            [class=sidebar] {
-                margin-right: 25px;
-                padding: 10px;
-            }
-            [class=sidebar] img {
-                width: 200px;
-            }
-            [class=content] {
-                flex: 1;
-                padding: 15px;
-            }
-            [class=interests] header {
-                font-size: 1.25em;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="all-contents">
-            <nav>
-            <header>Hunter M. Ledet</header>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="studies.html">Studies</a></li>
-            </ul>
-        </nav>
-            <main>
-                <div class="sidebar">
-                  <img src="http://diymag.com/media/img/General/Hall-of-Fame/_1500xAUTO_crop_center-center_75/tumblr_m8yak1u0a41qj3af5o1_1280.jpg"></img>  
-                </div>
-                <div class="content">
-                    <header>Welcome.</br> Please, have a seat. I'll be with you shortly.</header>
-                    <p></p>
-                    <section class="interest">
-                        <header> Interests</header>
-                    <ul>
-                        <li>excitement</li>
-                        <li>comedy</li>
-                        <li>classics</li>
-                    </ul>
-                    </section>
-                </div>
-            </main>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hunter Ledet</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
         </div>
-    </body>
+      </div>
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="masthead">
+      <div class="intro-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h1 class="brand-heading">Hunter Ledet</h1>
+              <p class="intro-text">Full-Stack Software Engineer
+                <br></p>
+              <a href="#about" class="btn btn-circle js-scroll-trigger">
+                <i class="fa fa-angle-double-down animated"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>A bit about me</h2>
+            <p>Coming from the South, technology has always been something that has not been paid much attention to. I have found that throughout my life I have always had a keen sense of trying to find out why or how something worked. This has lead me to take the interests that I have, everything from building my own computers for my own hobbies, to furthering my skill set in actual web-development, and dreaming of going beyond that to be truly proud of making something that millions of people use and enjoy on a regular basis.</p>
+            <p> These overarching ideas have led me down the path that I’m on currently, working my way growing as a Professional Software Developer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section content-section text-center">
+      <div class="container">
+        <div class="col-lg-8 mx-auto">
+          <h2>View my Resume</h2>
+          <a href="./img/Hunter Ledet Update.pdf" class="btn btn-default btn-lg" target="_blank">Here</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Contact Me</h2>
+            <ul class="list-inline banner-social-buttons">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/hunter-ledet/" class="btn btn-default btn-lg">
+                  <i class="fa fa-linkedin fa-fw"></i>
+                  <span class="network-name">LinkedIn</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/hunter-ledet" class="btn btn-default btn-lg">
+                  <i class="fa fa-github fa-fw"></i>
+                  <span class="network-name">Github</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://medium.com/@hunter.ledet" class="btn btn-default btn-lg">
+                  <i class="fa fa-medium fa-fw"></i>
+                  <span class="network-name">Medium</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="mailto:hunter.ledet@gmail.com" class="btn btn-default btn-lg">
+                  <i class="fa fa-google fa-fw"></i>
+                  <span class="network-name">hunter.ledet@gmail.com</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="container text-center">
+        <p>Copyright &copy; Hunter Ledet 2018</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/grayscale.min.js"></script>
+
+  </body>
+
 </html>
